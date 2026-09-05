@@ -1,6 +1,6 @@
 # neoyagami.github.io
 
-A simple English landing page for MouseJump, YASDEC, and PanelPC, with soft green and blue accents and a generic note about AI-assisted development.
+A simple English landing page for MouseJump, YASDEC, and PanelPC, with a dark background and soft green and blue accents and a generic note about AI-assisted development.
 
 ## Preview
 

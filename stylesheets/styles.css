@@ -1,13 +1,14 @@
 :root {
-  color-scheme: light;
-  --background: #f5f8f5;
-  --ink: #233b32;
-  --muted: #5b6c64;
-  --green: #3c7057;
-  --green-soft: #eaf2eb;
-  --blue: #416b89;
-  --blue-soft: #eaf2f9;
-  --line: #dbe5dd;
+  color-scheme: dark;
+  --background: #111815;
+  --surface: #19221d;
+  --ink: #d4dfd7;
+  --muted: #a0b0a5;
+  --green: #93bca0;
+  --green-soft: #243a2d;
+  --blue: #99b8d1;
+  --blue-soft: #233342;
+  --line: #314238;
 }
 @font-face { font-family: "Open Sans"; src: url("../fonts/OpenSans-Regular-webfont.woff") format("woff"); font-style: normal; font-weight: 400; font-display: swap; }
 @font-face { font-family: "Open Sans"; src: url("../fonts/OpenSans-Semibold-webfont.woff") format("woff"); font-style: normal; font-weight: 600; font-display: swap; }
@@ -18,18 +19,18 @@ body { margin: 0; background: var(--background); color: var(--ink); font-family:
 a { color: inherit; text-underline-offset: 4px; }
 a:hover { color: var(--green); }
 a:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; border-radius: 3px; }
-::selection { background: #cce2d2; color: #203a2c; }
+::selection { background: #365442; color: #e0e9e2; }
 .wrap { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
-.skip-link { position: absolute; left: 16px; top: -100px; z-index: 2; padding: 12px 20px; background: white; }
+.skip-link { position: absolute; left: 16px; top: -100px; z-index: 2; padding: 12px 20px; background: var(--surface); }
 .skip-link:focus { top: 12px; }
 .site-header { display: flex; align-items: center; justify-content: space-between; padding-block: 27px; border-bottom: 1px solid var(--line); }
 .wordmark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; letter-spacing: -.5px; font-size: 18px; }
-.brand-mark { display: grid; place-items: center; width: 33px; height: 33px; border-radius: 10px; background: var(--green); color: white; font-size: 23px; line-height: 1; padding-bottom: 4px; }
+.brand-mark { display: grid; place-items: center; width: 33px; height: 33px; border-radius: 10px; background: var(--green-soft); color: var(--green); font-size: 23px; line-height: 1; padding-bottom: 4px; }
 nav { display: flex; gap: 30px; font-size: 13px; font-weight: 600; }
 nav a { padding-block: 8px; text-decoration: none; }
 nav a:hover, .source:hover { text-decoration: underline; }
 .intro { position: relative; isolation: isolate; padding-block: 83px 75px; }
-.intro::before { content: ""; position: absolute; z-index: -1; inset: 0 -20px 0 35%; background: radial-gradient(ellipse at 70% 40%, #dceaf4aa, transparent 68%); pointer-events: none; }
+.intro::before { content: ""; position: absolute; z-index: -1; inset: 0 -20px 0 35%; background: radial-gradient(ellipse at 70% 40%, #29435755, transparent 68%); pointer-events: none; }
 .eyebrow { margin: 0 0 20px; color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
 .status-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 8px; background: #75a486; vertical-align: 1px; }
 h1 { margin: 0; font-size: clamp(38px, 5.1vw, 62px); font-weight: 600; line-height: 1.15; letter-spacing: -2.7px; }
@@ -41,7 +42,7 @@ h1 span { color: var(--green); }
 .section-heading h2 { margin: 0; font-size: 17px; font-weight: 600; }
 .section-heading > span { color: var(--muted); font-family: monospace; font-size: 12px; letter-spacing: 2px; }
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.project-card { display: flex; flex-direction: column; padding: 28px 25px 25px; background: white; border: 1px solid var(--line); border-radius: 14px; }
+.project-card { display: flex; flex-direction: column; padding: 28px 25px 25px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
 .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 27px; }
 .project-icon { width: 64px; height: 64px; display: grid; place-items: center; border-radius: 16px; color: var(--green); background: var(--green-soft); }
 .project-icon svg { width: 44px; height: 44px; }
@@ -56,14 +57,14 @@ h3 { margin: 0 0 3px; font-weight: 600; font-size: 25px; letter-spacing: -.8px; 
 .features li::before { content: ""; position: absolute; top: 8px; left: 0; width: 5px; height: 5px; border-radius: 50%; background: #80a18a; }
 .blue-card .features li::before { background: #87a6bc; }
 .card-links { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 11px; font-weight: 600; }
-.download { display: inline-flex; align-items: center; gap: 17px; padding: 10px 13px; border-radius: 6px; background: var(--green-soft); color: #30583f; text-decoration: none; }
-.download:hover { background: #dcebdd; color: #254c33; }
-.blue-card .download { background: var(--blue-soft); color: #355b77; }
-.blue-card .download:hover { background: #dce9f4; }
+.download { display: inline-flex; align-items: center; gap: 17px; padding: 10px 13px; border-radius: 6px; background: var(--green-soft); color: var(--green); text-decoration: none; }
+.download:hover { background: #304b3a; color: #b5d5bf; }
+.blue-card .download { background: var(--blue-soft); color: var(--blue); }
+.blue-card .download:hover { background: #30465a; }
 .source { padding-block: 10px; color: var(--muted); text-decoration: none; }
 .source span { margin-left: 3px; }
 .project-note { margin: 18px 0 0; color: var(--muted); font-size: 11px; }
-.about { display: grid; grid-template-columns: 1fr 1.2fr; align-items: start; gap: 55px; margin-block: 60px; padding: 31px 35px; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(110deg, #edf3ed, #edf3f7); }
+.about { display: grid; grid-template-columns: 1fr 1.2fr; align-items: start; gap: 55px; margin-block: 60px; padding: 31px 35px; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(110deg, #1c2a21, #1c2832); }
 .about .eyebrow { margin-bottom: 8px; font-size: 10px; letter-spacing: 1.2px; }
 .about h2 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -.5px; line-height: 1.5; }
 .about > p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.9; }
