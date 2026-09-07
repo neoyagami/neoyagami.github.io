@@ -41,7 +41,7 @@ h1 span { color: var(--green); }
 .section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
 .section-heading h2 { margin: 0; font-size: 17px; font-weight: 600; }
 .section-heading > span { color: var(--muted); font-family: monospace; font-size: 12px; letter-spacing: 2px; }
-.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .project-card { display: flex; flex-direction: column; padding: 28px 25px 25px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
 .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 27px; }
 .project-icon { width: 64px; height: 64px; display: grid; place-items: center; border-radius: 16px; color: var(--green); background: var(--green-soft); }
@@ -96,3 +96,34 @@ h3 { margin: 0 0 3px; font-weight: 600; font-size: 25px; letter-spacing: -.8px; 
   .site-footer { flex-direction: column; gap: 7px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Documentation uses the same dark palette as the project overview. */
+.docs { max-width: 860px; padding-block: 45px; }
+.docs h1 { font-size: clamp(38px, 6vw, 58px); margin-top: 22px; }
+.docs h2 { margin: 0 0 14px; font-size: 23px; font-weight: 600; }
+.docs section { margin-top: 38px; }
+.docs p, .docs li { color: var(--muted); }
+.docs .intro-copy { max-width: none; }
+.docs .doc-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; padding-block: 18px; border-block: 1px solid var(--line); }
+.docs .doc-nav a { color: var(--green); }
+.docs code { color: var(--ink); overflow-wrap: anywhere; }
+.docs pre { overflow-x: auto; padding: 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); line-height: 1.8; font-size: 13px; }
+.docs pre code { overflow-wrap: normal; }
+.docs .routing { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.docs .routing > div { padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.docs .routing h3 { font-size: 17px; letter-spacing: 0; }
+.docs .routing p { margin-bottom: 0; font-size: 14px; }
+.docs li { margin-block: 9px; }
+@media (max-width: 760px) { .docs .routing { grid-template-columns: 1fr; } }
+
+.driver-section { margin-top: 54px; }
+.driver-card { display: grid; grid-template-columns: 1.2fr 1fr; gap: 35px; }
+.driver-card .eyebrow { margin-bottom: 10px; }
+.driver-card .description:last-child { margin-bottom: 0; }
+.driver-card .features { margin-bottom: 20px; }
+.driver-card .project-note { margin-bottom: 20px; }
+@media (max-width: 760px) {
+  .driver-card { grid-template-columns: 1fr; gap: 20px; }
+  .driver-section .section-heading { align-items: start; gap: 16px; }
+  .driver-section .section-heading > span { text-align: right; letter-spacing: 0; }
+}

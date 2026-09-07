@@ -1,6 +1,6 @@
 # neoyagami.github.io
 
-A simple English landing page for MouseJump, YASDEC, and PanelPC, with a dark background and soft green and blue accents and a generic note about AI-assisted development.
+A simple English landing page for MouseJump, YASDEC, PanelPC, and Backloop, with a dark background and soft green and blue accents and a generic note about AI-assisted development. OpenGC570D appears below the desktop tools in a separate experimental kernel driver section.
 
 ## Preview
 
@@ -15,6 +15,7 @@ Then open <http://localhost:8000>. No build step, JavaScript, external fonts, or
 ## Edit
 
 - `index.html`: project descriptions, download links, and the development note.
+- `backloop.html`: Backloop overview, operating commands, and links to its upstream guides.
 - `stylesheets/styles.css`: layout, responsive styles, and color variables.
 - `images/favicon.svg`: browser icon.
 - `fonts/`: the local Open Sans files retained from the original site.

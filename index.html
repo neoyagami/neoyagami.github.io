@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#111815">
-  <meta name="description" content="Small, open-source desktop tools by neoyagami. Discover MouseJump for macOS, and YASDEC and PanelPC for Linux.">
+  <meta name="description" content="Small, open-source desktop tools by neoyagami. Discover MouseJump for macOS, and YASDEC, PanelPC, and Backloop for Linux.">
   <meta property="og:title" content="neoyagami — Small tools. Everyday improvements.">
-  <meta property="og:description" content="Open-source tools for your screens, Stream Deck, and desktop audio.">
+  <meta property="og:description" content="Open-source tools for your screens, Stream Deck, desktop audio, and video routing.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://neoyagami.github.io/">
   <title>neoyagami — Small tools. Everyday improvements.</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="stylesheets/styles.css?v=dark-1">
+  <link rel="stylesheet" href="stylesheets/styles.css?v=projects-2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -28,7 +28,7 @@
       <a class="intro-link" href="#projects">Explore the projects <span aria-hidden="true">↓</span></a>
     </section>
     <section id="projects" aria-labelledby="projects-title">
-      <div class="section-heading"><h2 id="projects-title">The projects</h2><span>01 — 03</span></div>
+      <div class="section-heading"><h2 id="projects-title">The projects</h2><span>01 — 04</span></div>
       <div class="project-grid">
         <article class="project-card">
           <div class="card-top">
@@ -63,8 +63,36 @@
           <ul class="features"><li>PipeWire and PulseAudio integration</li><li>Per-knob actions and profiles</li><li>RGB lighting and audio visualizers</li></ul>
           <div class="card-links"><a class="download" href="https://github.com/neoyagami/PanelPCLlit/releases/latest" aria-label="Download PanelPC">Download <span aria-hidden="true">↗</span></a><a class="source" href="https://github.com/neoyagami/PanelPCLlit" aria-label="View PanelPC source and documentation">Source &amp; docs <span aria-hidden="true">↗</span></a></div>
         </article>
+        <article class="project-card blue-card">
+          <div class="card-top">
+            <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="17" width="13" height="14" rx="3"/><path d="M17 24h8m0 0V12h7m-7 12v12h7"/><rect x="32" y="6" width="12" height="12" rx="2"/><rect x="32" y="30" width="12" height="12" rx="2"/><path d="m9 21 4 3-4 3z"/></svg></div>
+            <span class="platform">Linux</span>
+          </div>
+          <h3>Backloop</h3>
+          <p class="tagline">Bridge the gap between video apps.</p>
+          <p class="description">Connect physical PipeWire video sources to dedicated V4L2 virtual devices. Keep native PipeWire apps on the original source and give V4L2-only apps their own video endpoint.</p>
+          <ul class="features"><li>Named channels with individual video settings</li><li>Automatic device allocation and signal recovery</li><li>Test patterns when a source is unavailable</li></ul>
+          <div class="card-links"><a class="download" href="backloop.html">Documentation <span aria-hidden="true">→</span></a><a class="source" href="https://github.com/neoyagami/backloop" aria-label="View Backloop source">Source <span aria-hidden="true">↗</span></a></div>
+        </article>
       </div>
       <p class="project-note">Installation instructions, requirements, and release notes are in each project's repository.</p>
+    </section>
+    <section class="driver-section" aria-labelledby="driver-title">
+      <div class="section-heading"><h2 id="driver-title">Under the hood</h2><span>Experimental driver</span></div>
+      <article class="project-card driver-card">
+        <div>
+          <p class="eyebrow">Linux kernel · Hardware support</p>
+          <h3>OpenGC570D</h3>
+          <p class="tagline">Giving a capture card a life on Linux.</p>
+          <p class="description">An unofficial, experimental Linux kernel driver for the AVerMedia Live Gamer DUO GC570D. It exposes both HDMI inputs through V4L2 and ALSA, initializes HDMI IN 1 passthrough, and supports the enclosure's RGB lighting.</p>
+          <p class="description">This is a more involved hardware project: installation requires building and loading a kernel module for the exact supported card. It was validated on Bazzite 44; testing on other distributions and hardware setups is welcome.</p>
+        </div>
+        <div>
+          <ul class="features"><li>PCI ID 1461:0054 · subsystem 1461:5700</li><li>SDR capture up to 1920 × 1080 at 60 fps</li><li>Tested HDR-to-SDR conversion and downscaling</li><li>Rebuild required after each kernel update</li></ul>
+          <p class="project-note">Secure Boot requires a locally signed and enrolled module, or must be disabled. HDCP-protected content is unsupported. This project is not endorsed by AVerMedia.</p>
+          <div class="card-links"><a class="download" href="https://github.com/neoyagami/OpenGC570D/blob/main/docs/INSTALL.md">Installation guide <span aria-hidden="true">↗</span></a><a class="source" href="https://github.com/neoyagami/OpenGC570D/blob/main/docs/USAGE.md">Usage <span aria-hidden="true">↗</span></a><a class="source" href="https://github.com/neoyagami/OpenGC570D">Source &amp; status <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
     </section>
     <aside class="about" aria-labelledby="about-title">
       <div><p class="eyebrow">A note on the process</p><h2 id="about-title">Personal projects, built in the open.</h2></div>
